@@ -31,6 +31,11 @@ __I am not a designer, but I did try__
 
 - I was extremely tempted to use Material-UI or Bootstrap to speed this up. Since this is an interview, I decided to use nothing and build everything from scratch.
 - I even used my own Webpack build system rather than create-react-app.
+- I did load: FontAwesome Icons and 1 Google Font
 
-#### The original Project Requirements, below:
+---
+
+#### The original Project Requirements are below:
+
+---
 ![The Original Project Requirements](readme/Original_Requirements.png)
