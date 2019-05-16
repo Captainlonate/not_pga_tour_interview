@@ -3,10 +3,10 @@
 [Go to live application](http://pga.pirated.technology)
 
 ##### Desktop View
-![Screenshot of the application - Desktop](readme/Demo_1.png)
+![Screenshot of the application - Desktop](readme/Demo_desktop.png)
 
 ##### Mobile View
-![Screenshot of the application - Mobile](readme/Demo_2.png)
+![Screenshot of the application - Mobile](readme/Demo_mobile.png)
 
 __I am not a designer, but I did try__
 
