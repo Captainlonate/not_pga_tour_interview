@@ -2,6 +2,12 @@
 
 [Go to live application](http://pga.pirated.technology)
 
+#### Hello PGA! My name is Nathan. I put together this small project per the PGA tour specification provided to me.
+
+#### I would be happy to alter any aspect of this project to be more suitable to your expectations, if it would enhance my candidacy.
+
+### Thank you for the opportunity
+
 ##### Desktop View
 ![Screenshot of the application - Desktop](readme/Demo_desktop.png)
 

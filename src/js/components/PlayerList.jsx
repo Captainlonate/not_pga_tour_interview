@@ -1,9 +1,12 @@
-import PlayerListColumns from './PlayerListColumns.jsx';
 import PlayerListEmpty from './PlayerListEmpty.jsx';
 import PlayerRow from './PlayerRow.jsx';
 
 /*
+    Component: PlayerList
 
+    This component is responsible for presenting the list
+    of players (the actual rows of the "Table") (It's not a real table).
+    It creates a PlayerRow for each player.
 */
 const PlayerList = ({players, editPlayer, deletePlayer}) => {
     // If there are no players to show, then fallback to this Empty message
@@ -18,9 +21,6 @@ const PlayerList = ({players, editPlayer, deletePlayer}) => {
 
     return (
         <div className="player-list">
-            {/* The column titles of the "Tabular" data */}
-            {/* <PlayerListColumns titles={["Score", "Total", "Name", ""]} /> */}
-            {/* The rows of the "Tabular" data */}
             {rows}
         </div>
     );

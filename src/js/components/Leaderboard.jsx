@@ -5,7 +5,14 @@ import usePlayersState from '../hooks/usePlayersState.js';
 import {useEffect} from 'react';
 import ParContext from '../context/parContext.js';
 
+/*
+    Component: LeaderBoard
 
+    This is the primary component of the Leaderboard application.
+    It manages the state of the Players list and passes the list
+    as well as helper functions down to children components.
+    This consists of a Sidebar component, and a Content component
+*/
 const LeaderBoard = () => {
     let [players, addPlayer, deletePlayer, editPlayer, sort] = usePlayersState(SeedPlayerData);
 

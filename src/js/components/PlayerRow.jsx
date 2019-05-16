@@ -4,7 +4,15 @@ import useToggleState from '../hooks/useToggleState.js';
 
 
 /*
+    Component: PlayerRow
 
+    This component represents one row of the "Tabular" structure.
+    This is similar to a <tr>.
+    It would be a row within the PlayerList.
+    This type of row can be in one of two modes (Editing, or Presenting)
+    There are more specialized row components for each of the two modes.
+    When editing, you'll see a PlayerRowEdit
+    When simply viewing, you'll see a PlayerRowPres (Presentation)
 */
 const PlayerRow = ({player, editPlayer, deletePlayer}) => {
 

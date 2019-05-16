@@ -3,6 +3,12 @@ import ScoreCircle from './ScoreCircle.jsx';
 import {formatName, CalculatePar} from '../Utility.js';
 import ParContext from '../context/parContext.js';
 
+/*
+    Component: PlayerRowPres
+
+    This component is a specialized type of PlayerRow
+    This component simply presents the Player's data
+*/
 const PlayerRowPres = ({player, toggleEditing, deletePlayer, context}) => {
     // Invoked when the user clicks the 'Delete' icon for a given 'Player'
     let handleDelete = () => deletePlayer(player.id);

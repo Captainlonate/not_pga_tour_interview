@@ -4,6 +4,13 @@ import InputGroup from './InputGroup.jsx';
 import ValidationMessage from './ValidationMessage.jsx';
 import {validateString, validateNumRange, isFunction} from '../Utility.js';
 
+
+/*
+    Component: FormAddPlayer
+
+    This component is a form. Specifically, the one that allows
+    the user to Add a new Player. (It appears in the sidebar)
+*/
 const FormAddPlayer = ({onSubmit}) => {
 
     // The data fields behind each form field
@@ -40,21 +47,21 @@ const FormAddPlayer = ({onSubmit}) => {
     return (
         <form className="form form--add-player">
             {/* The Submit Button (To Add A New Player) */}
-            <button className="button button--stripey" type="submit" onClick={handleSubmit} >Add Player</button>
+            <button className="button button--stripey" type="submit" onClick={handleSubmit}>Add Player</button>
             
             {/* The Form Fields - First Name, Last Name, Score */}
             <InputGroup>
-                <input className={input_classes.join(' ')} type="text" name="first_name" value={first_name} onChange={setFNEvent} placeholder="First Name" required />
+                <input className={input_classes.join(' ')} type="text" value={first_name} onChange={setFNEvent} placeholder="First Name" required />
                 <ValidationMessage showing={submitAttempted && !first_name_isValid}>Invalid First Name (2+ Chars)</ValidationMessage>
             </InputGroup>
 
             <InputGroup>
-                <input className={input_classes.join(' ')} type="text" name="last_name" value={last_name} onChange={setLNEvent} placeholder="Last Name" required />
+                <input className={input_classes.join(' ')} type="text" value={last_name} onChange={setLNEvent} placeholder="Last Name" required />
                 <ValidationMessage showing={submitAttempted && !last_name_isValid}>Invalid Last Name (2+ Chars)</ValidationMessage>
             </InputGroup>
 
             <InputGroup>
-                <input className={input_classes.join(' ')} type="number" name="score" min="0" max="100" value={score} onChange={setScoreEvent} placeholder="Score" />
+                <input className={input_classes.join(' ')} type="number" min="0" max="100" value={score} onChange={setScoreEvent} placeholder="Score" />
                 <ValidationMessage showing={submitAttempted && !score_isValid}>Invalid Score [0, 100]</ValidationMessage>
             </InputGroup>
         </form>

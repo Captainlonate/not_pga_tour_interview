@@ -3,6 +3,13 @@ import useInputState from '../hooks/useInputState.js';
 import InputGroup from './InputGroup.jsx';
 import {validateString, validateNumRange} from '../Utility.js';
 
+/*
+    Component: PlayerRowEdit
+
+    This component is a specialized type of PlayerRow
+    This component allows the user to edit a single player,
+    by presenting a form within the "Table" row.
+*/
 const PlayerRowEdit = ({player, toggleEditing, editPlayer}) => {
 
     // The data fields behind each form field
