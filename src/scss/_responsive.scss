@@ -1,0 +1,101 @@
+
+/*
+    Leaderboard - 
+    Make the app wider
+    Decrease font sizes to allow more room
+*/
+@media screen and (max-width: 1200px) {
+    .leaderboard {
+        width: 90%;
+    }
+
+    .leaderboard-sidebar {
+        font-size: 1.5rem;
+    }
+    
+    .leaderboard-content {
+        font-size: 1.5rem;
+    }
+}
+
+/*
+    Leaderboard - 
+    Make the app wider
+    Decrease font sizes to allow more room
+*/
+@media screen and (max-width: 1000px) {
+    .leaderboard {
+        width: 92%;
+    }
+
+    .leaderboard-sidebar {
+        font-size: 1.3rem;
+    }
+    
+    .leaderboard-content {
+        font-size: 1.4rem;
+    }
+}
+
+/*
+    Leaderboard - 
+    Hide the Title within the sidebar
+    Lock the font sizes to the windows width
+*/
+@media screen and (max-width: 800px) {
+    .leaderboard__title {
+        display: none;
+    }
+
+    .leaderboard-sidebar {
+        font-size: 1.7vw;
+    }
+    
+    .leaderboard-content {
+        font-size: 1.7vw;
+    }
+}
+
+/*
+    Leaderboard - 
+    Stack the Sidebar and Content
+*/
+@media screen and (max-width: 700px) {
+    .leaderboard {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 95%;
+        height: 95%;
+    }
+    .leaderboard-sidebar {
+        width: 90%;
+        flex-direction: row;
+        margin-bottom: 1em;
+    }
+    .leaderboard-content {
+        width: 90%;
+        height: auto;
+        font-size: 1.85vw;
+        border-left: 4px solid darkred;
+    }
+    .leaderboard__logo {
+        width: 10em;
+        margin: 0 5em 0 0;
+    }
+    .player-row {
+        padding: 1em 1.75em;
+    }
+}
+
+/*
+    Leaderboard - 
+    (Notice this one is "max-height")
+    If the height gets too low, try to help out by getting rid
+    of the aesthetic title, while leaving the logo
+*/
+@media screen and (max-height: 800px) {
+    .leaderboard__title {
+        display: none;
+    }
+}

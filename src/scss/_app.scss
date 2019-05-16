@@ -1,0 +1,18 @@
+/*
+    **************************
+            App 
+    **************************
+*/
+
+/*
+    The container for the entire application
+*/
+.app {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Share', cursive;
+    color: #455861;
+}

@@ -1,0 +1,19 @@
+/*
+    **************************
+        Leaderboard 
+    **************************
+*/
+
+/*
+    Root Container for the "Leaderboard" component/app
+    Contains a:
+        - LeaderboardSidebar
+        - LeaderboardContent
+*/
+.leaderboard {
+    display: flex;
+    width: 85%;
+    height: 85%;
+    max-width: 1200px;
+    z-index: 5;
+}

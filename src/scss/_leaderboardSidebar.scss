@@ -1,0 +1,49 @@
+/*
+    **************************
+        Leaderboard Sidebar
+    **************************
+*/
+
+.leaderboard-sidebar {
+    // This is considered a 'pivot' point for this component
+    // Changing only this will resize the entire component, as
+    // everything beneath here should be using 'em'
+    font-size: 1.6rem;
+    display: flex;
+    background-color: $accent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // This component is fixed width - while the content component grows/shrinks
+    width: 20em;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1), inset 0 0 25px $accent;
+    padding: 2em;
+    // The bg-img will be 1, leaderboard 5, sidebar 10, 
+    z-index: 10;
+}
+
+.leaderboard__title {
+    font-size: 3em;
+    font-weight: 300;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+.leaderboard__title > span {
+    font-weight: 700;
+    color: white;
+    background-color: $brand-secondary;
+    border: 3px solid $brand-primary;
+    padding: 0.1em 0.5em;
+    display: inline-block;
+}
+
+.leaderboard__logo {
+    font-size: 1em;
+    display: block;
+    width: 70%;
+    height: auto;
+    margin-bottom: 4em;
+}

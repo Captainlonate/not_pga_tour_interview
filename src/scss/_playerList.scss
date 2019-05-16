@@ -1,0 +1,91 @@
+/*
+    **************************
+        Player List (and Rows)
+    **************************
+*/
+
+// The "Tabular" structure that contains a head row and several body rows
+.player-list {
+    padding: 4em 0 0 0;
+    overflow-y: auto;
+    height: 100%;
+}
+
+// What a row looks like, regardless of the head or body
+.player-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em 1.5em;
+}
+
+// What a row looks like when it appears in the "table" head
+.player-row--head {
+    font-weight: 700;
+    border-bottom: 7px solid $accent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1.25em 1.5em;
+}
+
+// What a row looks like when it's in an "editing" state
+.player-row--editing {
+    background-color: #fff7cf;
+}
+
+// What a row looks like, when it appears in the body
+.player-row--body {
+    border-bottom: 2px solid #eeeeee;
+}
+
+// What an empty row should look like (centered bold text)
+.player-row--empty {
+    justify-content: center;
+    font-weight: 700;
+}
+
+// First Column - Fixed Width
+.player-row__cell:first-child {
+    width: 6em;
+    margin-right: 1em;
+    // Don't let this column shrink
+    flex-shrink: 0;
+    padding: 0;
+}
+
+// Middle Column(s) - Fend for themselves
+.player-row__cell {
+    padding: 0 2.5em 0 0;
+}
+
+// Last Column - Pulls right
+.player-row__cell:last-child {
+    margin-left: auto;
+    padding: 0;
+}
+
+// Last Column - Icons
+.player-row__cell:last-child i {
+    font-size: 1.1em;
+}
+
+// Spread apart adjacent font-awesome icons
+.player-row__cell i~i {
+    margin-left: 1em;
+}
+
+// The unique appearance of Form Inputs, when they appear within
+// a Cell of the PlayerList
+.player-list .form__groups--flex .form__group {
+    padding-right: 1em;
+}
+
+// Put space beneath labels when they appear within a 
+// Cell of the PlayerList
+.player-list .form__group label {
+    display: inline-block;
+    padding-bottom: 0.5em;
+}

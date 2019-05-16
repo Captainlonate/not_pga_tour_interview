@@ -1,0 +1,70 @@
+/*
+    **************************
+        Animations / Keyframes
+    **************************
+*/
+
+/*
+    This class will make the item slightly bounce up and back
+    a couple of times, when the element is hovered
+*/
+.anim-bounce-up:hover {
+    animation-name: bounce-up;
+    animation-timing-function: ease-out;
+    animation-duration: 0.7s;
+}
+
+/*
+    This class will make the item slightly bounce down and back
+    a couple of times, when the element is hovered
+*/
+.anim-bounce-down:hover {
+    animation-name: bounce-down;
+    animation-timing-function: ease-out;
+    animation-duration: 0.7s;
+}
+
+
+@keyframes bounce-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(3px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,24 @@
+/*
+    **************************
+            Typography
+    **************************
+*/
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.txt-red,
+.txt-red:visited {
+    color: $accent;
+}
+
+.txt-orange,
+.txt-orange:visited {
+    color: $brand-primary;
+}
+
+.txt-green,
+.txt-green:visited {
+    color: green;
+}

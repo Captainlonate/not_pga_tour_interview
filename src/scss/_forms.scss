@@ -1,0 +1,78 @@
+/*
+    **************************
+            Forms
+    **************************
+*/
+
+/*
+    Forms - Generic
+*/
+
+.form {
+
+}
+
+.form__group {
+    margin-bottom: .75em;
+}
+
+.form__groups--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form__input {
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    background-color: white;
+    border: none;
+    padding: .25em .5em;
+    color: #696969;
+    border: 1px solid #696969;
+}
+
+// Opting to keep a white border which matches the bg color,
+// rather than no border, so there isn't a "Jump" when it's invalid
+.form__input--borderless {
+    border: 1px solid white;
+}
+
+// If a form input is marked invalid, it should appear
+// with a red border
+.form__input--invalid {
+    border: 1px solid red;
+}
+
+// If the invalid form input has focus, show the red border
+// rather than the natural blue outline
+.form__input--invalid:focus {
+    outline: none;
+}
+
+.form__input--rounded {
+    border-radius: 1em;
+}
+
+.form__validationmsg {
+    color: $brand-primary;
+    font-size: .75em;
+}
+
+
+/*
+    Forms - Specific - AddPlayer
+*/
+
+.form--add-player {
+    font-size: 1.1em;
+}
+
+.form--add-player .button {
+    font-size: 1.1em;
+    width: 80%;
+    margin-bottom: 1.5em;
+}

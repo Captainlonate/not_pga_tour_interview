@@ -1,0 +1,50 @@
+[
+    {
+        "id": "aaaabbbbcccc",
+        "first_name": "Buster",
+        "last_name": "Keaton",
+        "score": 96
+    },
+    {
+        "id": "bbbbccccdddd",
+        "first_name": "John",
+        "last_name": "Hancock",
+        "score": 87
+    },
+    {
+        "id": "ccccddddeeee",
+        "first_name": "Sean",
+        "last_name": "Plott",
+        "score": 56
+    },
+    {
+        "id": "ddddeeeeffff",
+        "first_name": "Happy",
+        "last_name": "Gilmore",
+        "score": 66
+    },
+    {
+        "id": "eeeeffffgggg",
+        "first_name": "Shooter",
+        "last_name": "McGavin",
+        "score": 66
+    },
+    {
+        "id": "abcdefg123",
+        "first_name": "Chubbs",
+        "last_name": "Peterson",
+        "score": 74
+    },
+    {
+        "id": "abcdefg456",
+        "first_name": "Mr.",
+        "last_name": "Larson",
+        "score": 57
+    },
+    {
+        "id": "ffffgggghhhh",
+        "first_name": "Don",
+        "last_name": "Quixote",
+        "score": 58
+    }
+]

@@ -1,0 +1,40 @@
+/*
+    **************************
+            Base 
+    **************************
+*/
+
+html,
+body {
+    box-sizing: border-box;
+}
+
+html {
+    /*
+        Using 10px, so that 1rem = 10px, 1.6rem = 16px
+        Makes for easier calculations
+    */
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Share', cursive, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+/*
+    Base colors for the application
+    It's important that this be included before other files
+    (That's why it's in base.scss)
+*/
+$brand-primary: #c9ae2c;
+$brand-primary-lite: #dfc652;
+$brand-secondary: #214477;
+$brand-secondary-lite: #5274a4;
+$accent: #8b0000;
