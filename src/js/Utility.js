@@ -56,6 +56,15 @@ export const isFunction = (fn) => (
 
 
 /*
+    Possibly not comprehensive, but it is useful enough
+    to check if a value is not among these things
+    Note, this is not a check of is truthy. That's different.
+*/
+export const isDefined = (val) => (
+    val !== "" && val !== undefined && val !== null
+);
+
+/*
     Get the string representation of a number's sign
     This forces the '+' sign for positive numbers
     It results in no sign for 0

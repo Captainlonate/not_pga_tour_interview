@@ -3,7 +3,7 @@ import useInputState from '../hooks/useInputState.js';
 import useValidatedInputState from '../hooks/useValidatedInputState.js';
 import InputGroup from './InputGroup.jsx';
 import ValidationMessage from './ValidationMessage.jsx';
-import {hasTwoChars, isFunction, zeroToHundred} from '../Utility.js';
+import {hasTwoChars, isFunction, zeroToHundred, isDefined} from '../Utility.js';
 
 
 /*
@@ -23,7 +23,7 @@ const FormAddPlayer = ({onSubmit}) => {
     // Is each form field currently valid?
     let first_name_isValid = hasTwoChars(first_name);
     let last_name_isValid = hasTwoChars(last_name);
-    let score_isValid = zeroToHundred(score);
+    let score_isValid = zeroToHundred(score) && isDefined(score);
 
     // Which classes should appear on these inputs
     let input_classes = ["form__input", "form__input--rounded", "form__input--borderless"];
