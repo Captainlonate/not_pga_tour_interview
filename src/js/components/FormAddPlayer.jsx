@@ -1,8 +1,9 @@
 import {useState} from 'react';
 import useInputState from '../hooks/useInputState.js';
+import useValidatedInputState from '../hooks/useValidatedInputState.js';
 import InputGroup from './InputGroup.jsx';
 import ValidationMessage from './ValidationMessage.jsx';
-import {validateString, validateNumRange, isFunction} from '../Utility.js';
+import {hasTwoChars, isFunction, zeroToHundred} from '../Utility.js';
 
 
 /*
@@ -16,13 +17,13 @@ const FormAddPlayer = ({onSubmit}) => {
     // The data fields behind each form field
     let [first_name, setFN, setFNEvent] = useInputState("");
     let [last_name, setLN, setLNEvent] = useInputState("");
-    let [score, setScore, setScoreEvent] = useInputState(0);
+    let [score, setScore, setScoreEvent] = useValidatedInputState([zeroToHundred], 0);
     let [submitAttempted, setSubmitAttempted] = useState(false);
-
+    
     // Is each form field currently valid?
-    let first_name_isValid = validateString(first_name, 2);
-    let last_name_isValid = validateString(last_name, 2);
-    let score_isValid = validateNumRange(score, 0, 100);
+    let first_name_isValid = hasTwoChars(first_name);
+    let last_name_isValid = hasTwoChars(last_name);
+    let score_isValid = zeroToHundred(score);
 
     // Which classes should appear on these inputs
     let input_classes = ["form__input", "form__input--rounded", "form__input--borderless"];

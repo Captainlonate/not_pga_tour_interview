@@ -14,7 +14,9 @@ export default (initialValue) => {
         let updatedPlayer = {...obj};
         // Filter out existing player - and make a new array in the process
         let newPlayers = values.filter(el => el.id !== obj.id);
+        // Add the edited player
         newPlayers.push(updatedPlayer);
+        // Re-sort the entire array (Insertion sort would be good here)
         let sorted = newPlayers.sort(comparator);
         setValues(sorted);
     };

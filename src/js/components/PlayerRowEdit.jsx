@@ -1,7 +1,8 @@
 import PlayerListCell from './PlayerListCell.jsx';
 import useInputState from '../hooks/useInputState.js';
 import InputGroup from './InputGroup.jsx';
-import {validateString, validateNumRange} from '../Utility.js';
+import {hasTwoChars, zeroToHundred, ifTrueFalse, isTrue} from '../Utility.js';
+import useValidatedInputState from '../hooks/useValidatedInputState.js';
 
 /*
     Component: PlayerRowEdit
@@ -12,24 +13,21 @@ import {validateString, validateNumRange} from '../Utility.js';
 */
 const PlayerRowEdit = ({player, toggleEditing, editPlayer}) => {
 
-    // The data fields behind each form field
-    let [first_name, setFN, setFNEvent] = useInputState(player.first_name);
-    let [last_name, setLN, setLNEvent] = useInputState(player.last_name);
-    let [score, setScore, setScoreEvent] = useInputState(player.score);
+    // The data fields behind each form field (Ignore some returned values ,,)
+    let [first_name, , setFNEvent] = useInputState(player.first_name);
+    let [last_name, , setLNEvent] = useInputState(player.last_name);
+    let [score, , setScoreEvent, scoreIsValid] = useValidatedInputState([zeroToHundred], player.score);
 
-    // Is each form field currently valid?
-    let first_name_isValid = validateString(first_name, 2);
-    let last_name_isValid = validateString(last_name, 2);
-    let score_isValid = validateNumRange(score, 0, 100);
-
-    //
-    let first_name_classes = (first_name_isValid) ? ["form__input"] : ["form__input", "form__input--invalid"];
-    let last_name_classes = (last_name_isValid) ? ["form__input"] : ["form__input", "form__input--invalid"];
-    let score_classes = (score_isValid) ? ["form__input"] : ["form__input", "form__input--invalid"];
+    // Determine which classes should appear on each of the form elements
+    let getClassesIf = ifTrueFalse(["form__input"], ["form__input", "form__input--invalid"]);
+    let first_name_classes = getClassesIf(hasTwoChars(first_name));
+    let last_name_classes = getClassesIf(hasTwoChars(last_name));
+    let score_classes = getClassesIf(scoreIsValid());
 
     // When the user attempts to save the changes...
     const attemptToSave = () => {
-        if ( first_name_isValid && last_name_isValid && score_isValid ) {
+        let checks = [hasTwoChars(first_name), hasTwoChars(last_name), scoreIsValid()];
+        if ( checks.every(isTrue) ) {
             editPlayer({first_name, last_name, score, id: player.id});
             toggleEditing();
         }
