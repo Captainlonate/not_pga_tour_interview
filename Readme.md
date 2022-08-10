@@ -1,4 +1,4 @@
-# PGA Tour - Interview Application
+# Not PGA Tour's Interview Application
 
 [Go to live application](http://pga.pirated.technology)
 
